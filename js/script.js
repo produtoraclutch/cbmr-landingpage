@@ -214,23 +214,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-    // =========================================================================
-// CONTAGEM REGRESSIVA DO TORNEIO (Quinta-feira, 06/08/2026 às 20:00)
+// =========================================================================
+// CONTAGEM REGRESSIVA DO TORNEIO (CBMR 2027 - Open Qualify: 24/01/2027)
 // =========================================================================
 function initTournamentCountdown() {
-    // Data alvo ajustada explicitamente para 06 de Agosto de 2026 às 20:00:00 (Fuso Horário de Brasília UTC-3)
-    const targetDate = new Date("2026-08-06T20:00:00-03:00").getTime();
+    // Data alvo ajustada para a Liga Desafiante 2027 Open Qualify (24/01/2027 às 20:00 - Horário de Brasília)
+    const targetDate = new Date("2027-01-24T20:00:00-03:00").getTime();
 
     const elDays = document.getElementById("timer-days");
     const elHours = document.getElementById("timer-hours");
     const elMinutes = document.getElementById("timer-minutes");
     const elSeconds = document.getElementById("timer-seconds");
-    const liveMsg = document.getElementById("tournament-live-msg");
+    
+    // Item de "Ao Vivo" comentado conforme solicitado
+    // const liveMsg = document.getElementById("tournament-live-msg");
 
-    // Verifica se os elementos existem no DOM para evitar erros
+    // Validação para evitar erros de execução caso algum ID não seja localizado
     if (!elDays || !elHours || !elMinutes || !elSeconds) return;
 
-    // Efeito sutil de animação quando o número muda
+    // Função de animação tátil no número quando ele troca
     function animateDigit(element, newValue) {
         if (element.textContent !== newValue) {
             element.textContent = newValue;
@@ -245,40 +247,46 @@ function initTournamentCountdown() {
         const now = new Date().getTime();
         const difference = targetDate - now;
 
-        // Se passar da hora do torneio
+        // Se a data for atingida ou ultrapassada
         if (difference <= 0) {
             elDays.textContent = "00";
             elHours.textContent = "00";
             elMinutes.textContent = "00";
             elSeconds.textContent = "00";
-            if (liveMsg) liveMsg.classList.remove("hidden");
+            
+            // Lógica do aviso "Ao Vivo" comentada por enquanto
+            /* 
+            if (liveMsg) {
+                liveMsg.classList.remove("hidden");
+            } 
+            */
             return;
         }
 
-        // Cálculos matemáticos de conversão de tempo
+        // Cálculos matemáticos de conversão para Dias, Horas, Minutos e Segundos
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
         const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-        // Formatação garantindo sempre 2 dígitos (ex: 05, 09, 12)
+        // Formatação com 2 dígitos sempre (ex: 04, 09, 15)
         const strDays = String(days).padStart(2, "0");
         const strHours = String(hours).padStart(2, "0");
         const strMinutes = String(minutes).padStart(2, "0");
         const strSeconds = String(seconds).padStart(2, "0");
 
-        // Atualização e disparo dos efeitos de escala
+        // Atualização visual com o micro-efeito de pulso
         animateDigit(elDays, strDays);
         animateDigit(elHours, strHours);
         animateDigit(elMinutes, strMinutes);
         animateDigit(elSeconds, strSeconds);
     }
 
-    // Executa a primeira vez de forma imediata e inicia o intervalo de 1 segundo
+    // Dispara imediatamente e cria a atualização a cada segundo
     updateCountdown();
     setInterval(updateCountdown, 1000);
 }
 
-// Inicialização automática assim que a estrutura do site carregar
+// Inicialização segura no carregamento do DOM
 document.addEventListener("DOMContentLoaded", initTournamentCountdown);
 
