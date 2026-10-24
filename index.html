@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBMR - Campeonato Brasileiro de Marvel Rivals</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Orbitron:wght@500;700;900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        orbitron: ['Orbitron', 'sans-serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: {
+                            400: '#FFE082',
+                            500: '#D4AF37',
+                            600: '#A9861B',
+                            700: '#8C6D13',
+                        },
+                        dark: {
+                            900: '#070707',
+                            800: '#121212',
+                            700: '#1A1A1A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-dark-900 text-gray-200 font-montserrat antialiased selection:bg-gold-500 selection:text-black">
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-dark-900/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <img src="img/Prancheta 8.png" alt="CBMR Logo" class="h-12 w-auto object-contain">
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wider">
+                <a href="#projeto" class="hover:text-gold-500 transition-colors">O PROJETO</a>
+                <a href="#formato" class="hover:text-gold-500 transition-colors">FORMATO</a>
+                <a href="#calendario" class="hover:text-gold-500 transition-colors">CALENDÁRIO</a>
+                <a href="#premiacao" class="hover:text-gold-500 transition-colors">PREMIAÇÃO</a>
+                <a href="#equipes" class="hover:text-gold-500 transition-colors">EQUIPES CONFIRMADAS</a>
+                <a href="#formulario"
+                    class="bg-gold-500 text-black px-5 py-2.5 rounded font-orbitron font-bold hover:bg-gold-400 transition-all shadow-lg hover:shadow-gold-500/20">SEJA
+                    UM PARCEIRO!</a>
+            </nav>
+
+            <div class="md:hidden flex items-center">
+                <button id="open-menu" class="text-gray-400 hover:text-white focus:outline-none"
+                    aria-label="Abrir Menu">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu"
+        class="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-dark-800/95 backdrop-blur-xl border-l border-white/5 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-center items-center gap-8 text-xl font-semibold tracking-wider">
+        <button id="close-menu" class="absolute top-6 right-6 text-gray-400 hover:text-white" aria-label="Fechar Menu">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <a href="#projeto" class="hover:text-gold-500 transition-colors mobile-link">O PROJETO</a>
+        <a href="#formato" class="hover:text-gold-500 transition-colors mobile-link">FORMATO</a>
+        <a href="#calendario" class="hover:text-gold-500 transition-colors mobile-link">CALENDÁRIO</a>
+        <a href="#premiacao" class="hover:text-gold-500 transition-colors">PREMIAÇÃO</a>
+        <a href="#equipes" class="hover:text-gold-500 transition-colors">EQUIPES CONFIRMADAS</a>
+        <a href="#formulario"
+            class="bg-gold-500 text-black px-5 py-2.5 rounded font-orbitron font-bold hover:bg-gold-400 transition-all shadow-lg hover:shadow-gold-500/20">SEJA
+            PARCEIRO</a>
+    </div>
+
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-dark-900">
+
+        <video autoplay loop muted playsinline
+            class="absolute inset-0 w-full h-full object-cover pointer-events-none filter blur-[6px] scale-105 opacity-40 z-0">
+            <source src="img/em breve.mp4" type="video/mp4">
+        </video>
+
+        <div
+            class="absolute inset-0 bg-gradient-to-b from-dark-900/50 via-dark-900/80 to-dark-900 pointer-events-none z-0">
+        </div>
+        <div
+            class="absolute inset-0 bg-radial-gradient from-transparent via-dark-900/50 to-dark-900 pointer-events-none z-0">
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-20 flex flex-col items-center">
+            <img src="img/Prancheta 8.png" alt="CBMR Emblem" class="h-32 md:h-44 w-auto mb-8 animate-pulse">
+
+            <p class="text-gold-400 font-orbitron font-bold tracking-[0.25em] text-sm md:text-lg mb-3">CAMPEONATO
+                BRASILEIRO DE MARVEL RIVALS</p>
+            <h1
+                class="text-4xl md:text-7xl font-orbitron font-black text-white tracking-tight uppercase leading-none mb-6">
+                O Próximo Nível do <br><span class="text-gold-gradient">Cenário Competitivo</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-gray-400 text-base md:text-lg mb-10 leading-relaxed font-light">
+                Prepare sua equipe para enfrentar os melhores do país na maior liga nacional de Marvel Rivals.
+            </p>
+
+            <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            <!-- <span class="text-gold-500 font-orbitron font-bold tracking-[0.2em] text-xs uppercase block mb-2">
+                Horário de Brasília
+            </span> -->
+            <h3 class="text-2xl md:text-3xl font-orbitron font-black text-white uppercase tracking-tight mb-8">
+                Estréia em <span class="text-gold-gradient">06 de Agosto às 20:00</span>
+            </h3>
+
+            <!-- Grid de Cards do Timer -->
+            <div class="grid grid-cols-4 gap-3 md:gap-6 max-w-2xl mx-auto">
+
+                <!-- DIAS -->
+                <div
+                    class="glass-card p-3 md:p-5 rounded-xl border border-gold-500/20 bg-gradient-to-b from-gold-500/[0.05] to-transparent flex flex-col items-center justify-center shadow-lg shadow-gold-500/5">
+                    <span id="timer-days"
+                        class="font-orbitron font-black text-3xl md:text-5xl text-white tracking-wider transition-transform duration-150">00</span>
+                    <span
+                        class="text-[9px] md:text-xs font-orbitron font-bold text-gold-400 uppercase tracking-widest mt-2">Dias</span>
+                </div>
+
+                <!-- HORAS -->
+                <div
+                    class="glass-card p-3 md:p-5 rounded-xl border border-gold-500/20 bg-gradient-to-b from-gold-500/[0.05] to-transparent flex flex-col items-center justify-center shadow-lg shadow-gold-500/5">
+                    <span id="timer-hours"
+                        class="font-orbitron font-black text-3xl md:text-5xl text-white tracking-wider transition-transform duration-150">00</span>
+                    <span
+                        class="text-[9px] md:text-xs font-orbitron font-bold text-gold-400 uppercase tracking-widest mt-2">Horas</span>
+                </div>
+
+                <!-- MINUTOS -->
+                <div
+                    class="glass-card p-3 md:p-5 rounded-xl border border-gold-500/20 bg-gradient-to-b from-gold-500/[0.05] to-transparent flex flex-col items-center justify-center shadow-lg shadow-gold-500/5">
+                    <span id="timer-minutes"
+                        class="font-orbitron font-black text-3xl md:text-5xl text-white tracking-wider transition-transform duration-150">00</span>
+                    <span
+                        class="text-[9px] md:text-xs font-orbitron font-bold text-gold-400 uppercase tracking-widest mt-2">Minutos</span>
+                </div>
+
+                <!-- SEGUNDOS (Com efeito de pulso continuo) -->
+                <div
+                    class="glass-card p-3 md:p-5 rounded-xl border border-gold-500/30 bg-gradient-to-b from-gold-500/[0.1] to-transparent flex flex-col items-center justify-center shadow-lg shadow-gold-500/10 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gold-500/5 animate-pulse pointer-events-none"></div>
+                    <span id="timer-seconds"
+                        class="font-orbitron font-black text-3xl md:text-5xl text-gold-gradient tracking-wider transition-transform duration-150">00</span>
+                    <span
+                        class="text-[9px] md:text-xs font-orbitron font-bold text-gold-400 uppercase tracking-widest mt-2">Segundos</span>
+                </div>
+            </div>
+
+            <!-- Mensagem de Transmissão Ao Vivo (Oculta até zerar a contagem) -->
+            <div id="tournament-live-msg" class="hidden mt-6">
+                <span
+                    class="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-red-600/20 border border-red-500/50 text-red-400 font-orbitron font-extrabold text-sm uppercase tracking-widest animate-pulse">
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span> O Torneio Está Ao Vivo!
+                </span>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="projeto" class="py-24 bg-dark-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <span
+                        class="text-gold-500 font-orbitron font-bold tracking-widest text-xs uppercase block">CBMR</span>
+                    <h2 class="text-3xl md:text-5xl font-orbitron font-black text-white uppercase tracking-tight">
+                        O <span class="text-gold-gradient">Projeto</span>
+                    </h2>
+                    <p class="text-gray-400 text-base md:text-lg leading-relaxed text-justify">
+                        O CBMR nasce como a primeira liga brasileira de Marvel Rivals. Unindo a expertise de transmissão
+                        e produção da <strong>Clutch Produtora</strong> em projetos consagrados no cenário como
+                        <strong>Protocolo Rivals</strong> e <strong>BKS Invitational</strong> e a comunidade
+                        <strong>Marvel Rivals Brazuka</strong>, entregamos o maior ecossistema do cenário com formato e
+                        nível de execução profissionais.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-5 glass-card p-8 rounded-lg relative overflow-hidden">
+                    <h3
+                        class="text-xl font-orbitron font-bold text-gold-500 uppercase mb-8 border-b border-gold-500/10 pb-4 tracking-wider">
+                        Por que Marvel Rivals?
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex gap-4 items-start">
+                            <div class="p-2 bg-gold-500/10 text-gold-500 rounded">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white uppercase text-sm tracking-wide">Hype Global & Marca
+                                    Consagrada</h4>
+                                <p class="text-xs text-gray-400 mt-1">Atração massiva de público e holofotes
+                                    internacionais.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="p-2 bg-gold-500/10 text-gold-500 rounded">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white uppercase text-sm tracking-wide">Comunidade Ativa &
+                                    Engajada</h4>
+                                <p class="text-xs text-gray-400 mt-1">Interação constante com torcedores e pro-players
+                                    ativos.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="p-2 bg-gold-500/10 text-gold-500 rounded">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white uppercase text-sm tracking-wide">Pioneirismo Nacional
+                                </h4>
+                                <p class="text-xs text-gray-400 mt-1">A primeira grande iniciativa estruturada no
+                                    cenário brasileiro.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formato" class="py-24 bg-dark-800 relative border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="text-gold-500 font-orbitron font-bold tracking-widest text-xs uppercase block mb-2">Estrutura
+                    Competitiva</span>
+                <h2 class="text-3xl md:text-5xl font-orbitron font-black text-white uppercase tracking-tight">Formato da
+                    <span class="text-gold-gradient">Liga</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="glass-card p-8 rounded-lg flex flex-col items-center text-center">
+                    <img src="img/Prancheta 6.png" alt="Liga Desafiante" class="h-20 w-auto mb-6 opacity-80">
+                    <h3 class="text-2xl font-orbitron font-bold text-white uppercase mb-4 tracking-wider">Liga
+                        Desafiante</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        A Liga Desafiante oferece oportunidades para descoberta de novas equipes do cenário e valoriza
+                        as categorias de base e equipes academy.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-lg flex flex-col items-center text-center border-gold-500/30">
+                    <img src="img/Prancheta 8.png" alt="Liga Principal" class="h-20 w-auto mb-6">
+                    <h3 class="text-2xl font-orbitron font-bold text-gold-500 uppercase mb-4 tracking-wider">Liga
+                        Principal</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                        A Liga Principal é onde as <span class="text-gold-400 font-bold">8 melhores equipes do
+                            país</span> se encontram. É a principal liga do país e responsável por elevar o nível de
+                        todas as equipes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-lg">
+                <div class="flex flex-col lg:flex-row gap-8 items-center">
+                    <div class="lg:w-1/3">
+                        <h4 class="text-2xl font-orbitron font-black text-white uppercase leading-tight tracking-wide">
+                            Liga <br><span class="text-gold-gradient">Competitiva</span>
+                        </h4>
+                        <div class="h-1 w-20 bg-gold-500 mt-4"></div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <p class="text-gray-400 leading-relaxed text-sm md:text-base">
+                            O formato da liga conta com o sistema de <strong>promoção e rebaixamento</strong> entre as
+                            divisões, onde as duas melhores equipes da Liga Desafiante são promovidas para a Liga
+                            Principal no próximo Split e as duas equipes pior colocadas sofrem o rebaixamento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE PREMIAÇÃO (PÓDIO) -->
+    <section id="premiacao" class="py-24 bg-dark-900 relative overflow-hidden border-b border-white/5">
+        <!-- Linhas decorativas de fundo -->
+        <div
+            class="absolute inset-0 bg-radial-gradient from-transparent via-dark-900/50 to-dark-900 pointer-events-none">
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+            <!-- Cabeçalho da Seção -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="text-gold-500 font-orbitron font-bold tracking-widest text-xs uppercase block mb-2">PREMIAÇÃO</span>
+                <h2 class="text-3xl md:text-5xl font-orbitron font-black text-white uppercase tracking-tight">
+                    PREMIAÇÃO DO <span class="text-gold-gradient">CBMR 2026 SPLIT 1</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base mt-4">
+                    Dispute o topo do cenário brasileiro e garanta sua parte da premiação total de <span
+                        class="text-white font-bold">R$ 4.000,00</span>.
+                </p>
+            </div>
+
+            <!-- Container do Pódio (items-end faz com que todos alinhem pela base no desktop) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-end max-w-4xl mx-auto px-4">
+
+                <!-- 2º LUGAR -->
+                <div
+                    class="glass-card p-8 rounded-lg text-center flex flex-col items-center order-2 md:order-1 transform hover:-translate-y-1 transition-all duration-300 min-h-[240px] justify-center border-white/10">
+                    <span class="font-orbitron font-black text-4xl text-gray-400 mb-2 block">2º</span>
+                    <span
+                        class="text-xs font-orbitron font-bold tracking-wider text-gray-400 uppercase mb-4">Lugar</span>
+                    <div class="h-[1px] w-12 bg-white/10 mb-4"></div>
+                    <p class="font-orbitron font-black text-2xl md:text-3xl text-white tracking-tight">
+                        R$ 1000
+                    </p>
+                </div>
+
+                <!-- 1º LUGAR (Mais alto, com destaque dourado e efeito de glow) -->
+                <div
+                    class="glass-card p-10 rounded-lg text-center flex flex-col items-center order-1 md:order-2 transform hover:-translate-y-2 transition-all duration-300 min-h-[300px] justify-center border-gold-500/40 relative shadow-2xl shadow-gold-500/5 bg-gradient-to-b from-gold-500/5 to-transparent">
+                    <!-- Selo de Campeão -->
+                    <div
+                        class="absolute -top-4 bg-gradient-to-r from-gold-600 to-gold-400 text-black font-orbitron font-black text-[10px] tracking-widest uppercase px-4 py-1 rounded shadow">
+                        CAMPEÃO
+                    </div>
+                    <span
+                        class="font-orbitron font-black text-6xl text-gold-500 mb-2 block text-gold-gradient animate-pulse">1º</span>
+                    <span
+                        class="text-xs font-orbitron font-bold tracking-widest text-gold-400 uppercase mb-4">Lugar</span>
+                    <div class="h-[1px] w-16 bg-gold-500/20 mb-4"></div>
+                    <p
+                        class="font-orbitron font-black text-4xl md:text-5xl text-gold-400 tracking-tight text-gold-gradient">
+                        R$ 2500
+                    </p>
+                </div>
+
+                <!-- 3º LUGAR -->
+                <div
+                    class="glass-card p-6 rounded-lg text-center flex flex-col items-center order-3 md:order-3 transform hover:-translate-y-1 transition-all duration-300 min-h-[200px] justify-center border-white/5 opacity-80 hover:opacity-100">
+                    <span class="font-orbitron font-black text-3xl text-amber-700 mb-1 block">3º</span>
+                    <span
+                        class="text-xs font-orbitron font-bold tracking-wider text-gray-500 uppercase mb-3">Lugar</span>
+                    <div class="h-[1px] w-10 bg-white/5 mb-3"></div>
+                    <p class="font-orbitron font-black text-xl md:text-2xl text-gray-300 tracking-tight">
+                        R$ 500
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Observação Estruturada com Ícone de Informação -->
+            <div
+                class="mt-12 flex items-start justify-center gap-2.5 max-w-md mx-auto px-4 py-3 rounded-lg bg-white/[0.02] border border-white/5">
+                <!-- Ícone de Informação (SVG Dinâmico) -->
+                <svg class="w-4 h-4 text-gold-500/60 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <!-- Texto da Diretriz -->
+                <p class="text-[11px] md:text-xs text-gray-400 font-sans tracking-wide text-left leading-relaxed">
+                    A premiação será repassada integralmente ao capitão da equipe em até 60 dias após o término do
+                    torneio.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO: EQUIPES PARTICIPANTES (FOCO CENTRAL) -->
+    <section id="equipes" class="py-24 bg-dark-900 relative overflow-hidden border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+            <!-- Cabeçalho -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+                <div>
+                    <span
+                        class="text-gold-500 font-orbitron font-bold tracking-widest text-xs uppercase block mb-2">CBMR
+                        2026 Split 1</span>
+                    <h2 class="text-3xl md:text-5xl font-orbitron font-black text-white uppercase tracking-tight">
+                        Equipes <span class="text-gold-gradient">Confirmadas</span>
+                    </h2>
+                </div>
+
+                <!-- Controles -->
+                <div class="flex gap-3 self-end md:self-auto">
+                    <button id="carousel-prev"
+                        class="w-12 h-12 rounded border border-white/10 bg-white/[0.02] flex items-center justify-center text-white hover:border-gold-500 hover:text-gold-500 transition-all group">
+                        <svg class="w-5 h-5 transform group-hover:-translate-x-0.5 transition-transform" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button id="carousel-next"
+                        class="w-12 h-12 rounded border border-white/10 bg-white/[0.02] flex items-center justify-center text-white hover:border-gold-500 hover:text-gold-500 transition-all group">
+                        <svg class="w-5 h-5 transform group-hover:translate-x-0.5 transition-transform" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Palco do Carrossel (Garante apenas 3 cards visíveis em telas maiores) -->
+            <div class="relative max-w-5xl mx-auto">
+                <div id="teams-stage" class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center min-h-[420px] px-4">
+                    <!-- Os 3 cards ativos serão injetados aqui via JavaScript -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="calendario" class="py-24 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-8">
+                    <div>
+                        <span
+                            class="text-gold-500 font-orbitron font-bold tracking-widest text-xs uppercase block mb-2">Transmissão
+                            Oficial</span>
+                        <h2 class="text-3xl md:text-5xl font-orbitron font-black text-white uppercase tracking-tight">
+                            Calendário & <br><span class="text-gold-gradient">Transmissão</span>
+                        </h2>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex gap-4 items-center p-4 bg-dark-800 rounded-lg border-l-4 border-white/40">
+                            <img src="img/Prancheta 6.png" alt="Desafiante Icon" class="h-8 w-auto">
+                            <div>
+                                <span
+                                    class="text-xs text-gray-400 block tracking-wider uppercase font-bold">Quintas-Feiras
+                                    (20:00 BRT)</span>
+                                <p class="text-white font-orbitron text-sm uppercase font-semibold">Rodada Oficial da
+                                    Liga Desafiante</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-center p-4 bg-dark-800 rounded-lg border-l-4 border-gold-500">
+                            <img src="img/Prancheta 8.png" alt="Principal Icon" class="h-8 w-auto">
+                            <div>
+                                <span
+                                    class="text-xs text-gold-400 block tracking-wider uppercase font-bold">Sextas-Feiras
+                                    (20:00 BRT)</span>
+                                <p class="text-gold-500 font-orbitron text-sm uppercase font-semibold">Rodada Oficial da
+                                    Liga Principal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 glass-card p-8 rounded-lg">
+                    <h3
+                        class="text-xl font-orbitron font-bold text-white uppercase mb-6 tracking-wider flex items-center gap-3">
+                        <span class="w-2.5 h-2.5 rounded-full bg-gold-500"></span> Formato da Competição
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Ambas as ligas acontecem em formato de <strong>pontos corridos</strong> onde todas as equipes se
+                        enfrentam mutuamente ao longo de <strong>7 rodadas</strong>, as partidas do Split 1 começam no
+                        dia <span class="text-gold-400 font-bold">06 de Agosto</span>.
+                    </p>
+                    <div class="bg-dark-900/60 p-6 rounded border border-white/5 space-y-4">
+                        <div class="flex items-start gap-3">
+                            <span class="text-gold-500 font-bold font-orbitron">01.</span>
+                            <p class="text-xs text-gray-300">A Liga Principal conta com uma rodada extra de
+                                <strong>Playoffs</strong> entre as quatro equipes melhor colocadas.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-gold-500 font-bold font-orbitron">02.</span>
+                            <p class="text-xs text-gray-300">Os Playoffs serão realizados em um <strong>Grande Evento
+                                    Realizado</strong> no sábado e domingo (<span class="text-gold-400 font-bold">26 e
+                                    27 de Setembro</span>).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formulario" class="py-24 bg-dark-800 relative overflow-hidden border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+            <div class="text-center mb-12">
+                <span
+                    class="text-gold-500 font-orbitron font-bold tracking-widest text-xs uppercase block mb-2">Parcerias
+                    & Negócios</span>
+                <h2 class="text-3xl md:text-5xl font-orbitron font-black text-white uppercase tracking-tight">Traga sua
+                    <span class="text-gold-gradient">Marca</span></h2>
+                <p class="text-gray-400 text-sm md:text-base mt-4 max-w-xl mx-auto">
+                    Conecte sua empresa ao público altamente engajado do eSports nacional. Preencha o formulário abaixo
+                    para receber nossa proposta comercial e Media Kit do CBMR.
+                </p>
+            </div>
+
+            <div class="glass-card p-8 md:p-12 rounded-xl">
+                <form id="sponsor-contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="company-name"
+                                class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Nome da
+                                Empresa / Marca</label>
+                            <input type="text" id="company-name" name="company-name" required
+                                placeholder="Ex: Gaming Tech Ltda"
+                                class="w-full bg-dark-900 border border-white/10 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500/80 transition-colors">
+                        </div>
+
+                        <div>
+                            <label for="contact-name"
+                                class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Nome do
+                                Representante</label>
+                            <input type="text" id="contact-name" name="contact-name" required
+                                placeholder="Ex: André Souza"
+                                class="w-full bg-dark-900 border border-white/10 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500/80 transition-colors">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email"
+                                class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">E-mail
+                                Corporativo</label>
+                            <input type="email" id="email" name="email" required placeholder="Ex: parcerias@empresa.com"
+                                class="w-full bg-dark-900 border border-white/10 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500/80 transition-colors">
+                        </div>
+
+                        <div>
+                            <label for="phone"
+                                class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Telefone /
+                                WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Ex: (11) 99999-9999"
+                                class="w-full bg-dark-900 border border-white/10 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500/80 transition-colors">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="message"
+                            class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Mensagem ou
+                            Objetivos da Marca (Opcional)</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Conte-nos brevemente o que sua marca busca ativando no CBMR (Naming Rights, Cota Ouro, inserções na transmissão...)"
+                            class="w-full bg-dark-900 border border-white/10 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500/80 transition-colors resize-none"></textarea>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit"
+                            class="w-full bg-gradient-to-r from-gold-600 to-gold-500 text-black font-orbitron font-extrabold text-sm uppercase tracking-wider py-4 rounded shadow-lg hover:shadow-gold-500/20 transform hover:-translate-y-0.5 transition-all">
+                            Solicitar Proposta Comercial
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-dark-900 border-t border-white/5 py-12 relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-radial-gradient from-transparent via-dark-900/50 to-dark-900 pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8 border-b border-white/5 pb-8 mb-8">
+                <div class="flex items-center gap-4 text-center md:text-left">
+                    <img src="img/Prancheta 8.png" alt="CBMR" class="h-12 w-auto object-contain">
+                    <div>
+                        <p class="text-sm font-orbitron font-bold text-white tracking-wider">CBMR</p>
+                        <p class="text-xs text-gray-400">Campeonato Brasileiro de Marvel Rivals</p>
+                    </div>
+                </div>
+
+                <nav class="flex flex-wrap justify-center gap-6 text-xs font-semibold tracking-wider text-gray-400">
+                    <a href="#projeto" class="hover:text-gold-500 transition-colors">PROJETO</a>
+                    <a href="#formato" class="hover:text-gold-500 transition-colors">FORMATO</a>
+                    <a href="#calendario" class="hover:text-gold-500 transition-colors">CALENDÁRIO</a>
+                    <a href="#premiacao" class="hover:text-gold-500 transition-colors">PREMIAÇÃO</a>
+                    <a href="#equipes" class="hover:text-gold-500 transition-colors">EQUIPES CONFIRMADAS</a>
+                    <a href="#formulario" class="hover:text-gold-500 transition-colors">SEJA PARCEIRO</a>
+                </nav>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+                <div class="text-center lg:text-left order-2 lg:order-1 space-y-1">
+                    <p class="text-xs text-gray-500">&copy; 2026 CBMR. Todos os direitos reservados.</p>
+                    <p class="text-[10px] text-gray-600 max-w-md">
+                        Este é um projeto independente realizado por produtores e comunidade. Marvel Rivals e todas as
+                        propriedades associadas pertencem à NetEase Games e Marvel.
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center gap-6 order-1 lg:order-2">
+                    <span
+                        class="text-xs font-orbitron font-bold tracking-widest text-gray-500 uppercase">REALIZAÇÃO</span>
+
+                    <div class="flex items-center gap-6 bg-black/30 px-6 py-3 rounded-lg border border-white/5">
+                        <div class="h-8 flex items-center justify-center">
+                            <img src="img/Logo_H.png" alt="Clutch Produtora"
+                                class="h-7 md:h-8 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 filter drop-shadow-[0_0_8px_rgba(111,85,224,0.15)]">
+                        </div>
+
+                        <div class="h-5 w-[1px] bg-white/10"></div>
+
+                        <div class="h-8 flex items-center justify-center">
+                            <img src="img/BRAZUKA_2.png" alt="Marvel Rivals Brazuka"
+                                class="h-7 md:h-8 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
