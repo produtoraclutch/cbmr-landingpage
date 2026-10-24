@@ -50,12 +50,11 @@
                 <img src="img/Prancheta 8.png" alt="CBMR Logo" class="h-12 w-auto object-contain">
             </a>
 
+            <!-- Navegação Desktop Atualizada -->
             <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wider">
-                <a href="#projeto" class="hover:text-gold-500 transition-colors">O PROJETO</a>
+                <a href="#circuito" class="hover:text-gold-500 transition-colors">CIRCUITO 2027</a>
                 <a href="#formato" class="hover:text-gold-500 transition-colors">FORMATO</a>
-                <a href="#calendario" class="hover:text-gold-500 transition-colors">CALENDÁRIO</a>
                 <a href="#premiacao" class="hover:text-gold-500 transition-colors">PREMIAÇÃO</a>
-                <a href="#equipes" class="hover:text-gold-500 transition-colors">EQUIPES CONFIRMADAS</a>
                 <a href="#formulario"
                     class="bg-gold-500 text-black px-5 py-2.5 rounded font-orbitron font-bold hover:bg-gold-400 transition-all shadow-lg hover:shadow-gold-500/20">SEJA
                     UM PARCEIRO!</a>
@@ -90,7 +89,8 @@
             PARCEIRO</a>
     </div>
 
-    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-dark-900">
+    <!-- SEÇÃO HERO: CBMR 2027 (CENTRALIZADO VERTICALMENTE) -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-900 pt-20 pb-12">
 
         <video autoplay loop muted playsinline
             class="absolute inset-0 w-full h-full object-cover pointer-events-none filter blur-[6px] scale-105 opacity-40 z-0">
@@ -104,81 +104,86 @@
             class="absolute inset-0 bg-radial-gradient from-transparent via-dark-900/50 to-dark-900 pointer-events-none z-0">
         </div>
 
-        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-20 flex flex-col items-center">
-            <img src="img/Prancheta 8.png" alt="CBMR Emblem" class="h-32 md:h-44 w-auto mb-8 animate-pulse">
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center flex flex-col items-center justify-center w-full">
+            
+            <!-- Emblem/Logo com margem ajustada -->
+            <img src="img/Prancheta 8.png" alt="CBMR Emblem" class="h-24 md:h-36 w-auto mb-5 animate-pulse">
 
-            <p class="text-gold-400 font-orbitron font-bold tracking-[0.25em] text-sm md:text-lg mb-3">CAMPEONATO
-                BRASILEIRO DE MARVEL RIVALS</p>
-            <h1
-                class="text-4xl md:text-7xl font-orbitron font-black text-white tracking-tight uppercase leading-none mb-6">
+            <p class="text-gold-400 font-orbitron font-bold tracking-[0.25em] text-xs md:text-base mb-2">
+                CAMPEONATO BRASILEIRO DE MARVEL RIVALS 2027
+            </p>
+            
+            <h1 class="text-3xl md:text-6xl font-orbitron font-black text-white tracking-tight uppercase leading-none mb-4">
                 O Próximo Nível do <br><span class="text-gold-gradient">Cenário Competitivo</span>
             </h1>
 
-            <p class="max-w-2xl mx-auto text-gray-400 text-base md:text-lg mb-10 leading-relaxed font-light">
+            <!-- <p class="max-w-2xl mx-auto text-gray-400 text-sm md:text-base mb-6 leading-relaxed font-light">
                 Prepare sua equipe para enfrentar os melhores do país na maior liga nacional de Marvel Rivals.
-            </p>
+            </p> -->
 
-            <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
-            <!-- <span class="text-gold-500 font-orbitron font-bold tracking-[0.2em] text-xs uppercase block mb-2">
-                Horário de Brasília
-            </span> -->
-            <h3 class="text-2xl md:text-3xl font-orbitron font-black text-white uppercase tracking-tight mb-8">
-                Estréia em <span class="text-gold-gradient">06 de Agosto às 20:00</span>
-            </h3>
+            <div class="max-w-4xl mx-auto w-full relative z-10 text-center">
+                <h3 class="text-xl md:text-2xl font-orbitron font-black text-white uppercase tracking-tight mb-6">
+                    Liga Desafiante 2027 Open Qualify em <span class="text-gold-gradient">24 de Janeiro</span>
+                </h3>
 
-            <!-- Grid de Cards do Timer -->
-            <div class="grid grid-cols-4 gap-3 md:gap-6 max-w-2xl mx-auto">
+                <!-- Grid de Cards do Timer -->
+                <div class="grid grid-cols-4 gap-2.5 md:gap-5 max-w-2xl mx-auto">
 
-                <!-- DIAS -->
-                <div
-                    class="glass-card p-3 md:p-5 rounded-xl border border-gold-500/20 bg-gradient-to-b from-gold-500/[0.05] to-transparent flex flex-col items-center justify-center shadow-lg shadow-gold-500/5">
-                    <span id="timer-days"
-                        class="font-orbitron font-black text-3xl md:text-5xl text-white tracking-wider transition-transform duration-150">00</span>
-                    <span
-                        class="text-[9px] md:text-xs font-orbitron font-bold text-gold-400 uppercase tracking-widest mt-2">Dias</span>
+                    <!-- DIAS -->
+                    <div class="glass-card p-2.5 md:p-4 rounded-xl border border-gold-500/20 bg-gradient-to-b from-gold-500/[0.05] to-transparent flex flex-col items-center justify-center shadow-lg shadow-gold-500/5">
+                        <span id="timer-days" class="font-orbitron font-black text-2xl md:text-4xl text-white tracking-wider transition-transform duration-150">00</span>
+                        <span class="text-[8px] md:text-[10px] font-orbitron font-bold text-gold-400 uppercase tracking-widest mt-1">Dias</span>
+                    </div>
+
+                    <!-- HORAS -->
+                    <div class="glass-card p-2.5 md:p-4 rounded-xl border border-gold-500/20 bg-gradient-to-b from-gold-500/[0.05] to-transparent flex flex-col items-center justify-center shadow-lg shadow-gold-500/5">
+                        <span id="timer-hours" class="font-orbitron font-black text-2xl md:text-4xl text-white tracking-wider transition-transform duration-150">00</span>
+                        <span class="text-[8px] md:text-[10px] font-orbitron font-bold text-gold-400 uppercase tracking-widest mt-1">Horas</span>
+                    </div>
+
+                    <!-- MINUTOS -->
+                    <div class="glass-card p-2.5 md:p-4 rounded-xl border border-gold-500/20 bg-gradient-to-b from-gold-500/[0.05] to-transparent flex flex-col items-center justify-center shadow-lg shadow-gold-500/5">
+                        <span id="timer-minutes" class="font-orbitron font-black text-2xl md:text-4xl text-white tracking-wider transition-transform duration-150">00</span>
+                        <span class="text-[8px] md:text-[10px] font-orbitron font-bold text-gold-400 uppercase tracking-widest mt-1">Minutos</span>
+                    </div>
+
+                    <!-- SEGUNDOS -->
+                    <div class="glass-card p-2.5 md:p-4 rounded-xl border border-gold-500/30 bg-gradient-to-b from-gold-500/[0.1] to-transparent flex flex-col items-center justify-center shadow-lg shadow-gold-500/10 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gold-500/5 animate-pulse pointer-events-none"></div>
+                        <span id="timer-seconds" class="font-orbitron font-black text-2xl md:text-4xl text-gold-gradient tracking-wider transition-transform duration-150">00</span>
+                        <span class="text-[8px] md:text-[10px] font-orbitron font-bold text-gold-400 uppercase tracking-widest mt-1">Segundos</span>
+                    </div>
                 </div>
 
-                <!-- HORAS -->
-                <div
-                    class="glass-card p-3 md:p-5 rounded-xl border border-gold-500/20 bg-gradient-to-b from-gold-500/[0.05] to-transparent flex flex-col items-center justify-center shadow-lg shadow-gold-500/5">
-                    <span id="timer-hours"
-                        class="font-orbitron font-black text-3xl md:text-5xl text-white tracking-wider transition-transform duration-150">00</span>
-                    <span
-                        class="text-[9px] md:text-xs font-orbitron font-bold text-gold-400 uppercase tracking-widest mt-2">Horas</span>
+                <!-- BOTÃO DE INSCRIÇÃO NO QUALIFY -->
+                <div class="mt-6 flex flex-col items-center justify-center gap-2">
+                    <a href="https://www.challengermode.com/tournaments/c4146236-1028-4641-effe-08df2c64aa06?UTM_Campaign=SharedTournament"
+                        target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-3 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-400 text-black font-orbitron font-black text-xs md:text-sm uppercase tracking-wider px-6 py-3.5 rounded-lg shadow-xl shadow-gold-500/20 hover:shadow-gold-500/40 transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 group relative overflow-hidden">
+                        <span class="absolute inset-0 w-full h-full bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></span>
+                        
+                        <span>Inscreva Sua Equipe no Open Qualify</span>
+                        
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
+                        </svg>
+                    </a>
+                    <span class="text-[9px] md:text-[11px] font-orbitron font-bold tracking-widest text-gray-400 uppercase">
+                        *Período de inscrições definidos via Challengermode
+                    </span>
                 </div>
 
-                <!-- MINUTOS -->
-                <div
-                    class="glass-card p-3 md:p-5 rounded-xl border border-gold-500/20 bg-gradient-to-b from-gold-500/[0.05] to-transparent flex flex-col items-center justify-center shadow-lg shadow-gold-500/5">
-                    <span id="timer-minutes"
-                        class="font-orbitron font-black text-3xl md:text-5xl text-white tracking-wider transition-transform duration-150">00</span>
-                    <span
-                        class="text-[9px] md:text-xs font-orbitron font-bold text-gold-400 uppercase tracking-widest mt-2">Minutos</span>
-                </div>
-
-                <!-- SEGUNDOS (Com efeito de pulso continuo) -->
-                <div
-                    class="glass-card p-3 md:p-5 rounded-xl border border-gold-500/30 bg-gradient-to-b from-gold-500/[0.1] to-transparent flex flex-col items-center justify-center shadow-lg shadow-gold-500/10 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gold-500/5 animate-pulse pointer-events-none"></div>
-                    <span id="timer-seconds"
-                        class="font-orbitron font-black text-3xl md:text-5xl text-gold-gradient tracking-wider transition-transform duration-150">00</span>
-                    <span
-                        class="text-[9px] md:text-xs font-orbitron font-bold text-gold-400 uppercase tracking-widest mt-2">Segundos</span>
+                <!-- Mensagem de Transmissão Ao Vivo (Oculta) -->
+                <div id="tournament-live-msg" class="hidden mt-4">
+                    <span class="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-red-600/20 border border-red-500/50 text-red-400 font-orbitron font-extrabold text-xs uppercase tracking-widest animate-pulse">
+                        <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span> O Qualify Está Ao Vivo!
+                    </span>
                 </div>
             </div>
-
-            <!-- Mensagem de Transmissão Ao Vivo (Oculta até zerar a contagem) -->
-            <div id="tournament-live-msg" class="hidden mt-6">
-                <span
-                    class="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-red-600/20 border border-red-500/50 text-red-400 font-orbitron font-extrabold text-sm uppercase tracking-widest animate-pulse">
-                    <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span> O Torneio Está Ao Vivo!
-                </span>
-            </div>
-        </div>
         </div>
     </section>
 
-    <section id="projeto" class="py-24 bg-dark-900 relative">
+    <!-- <section id="projeto" class="py-24 bg-dark-900 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 space-y-6">
@@ -190,7 +195,7 @@
                     <p class="text-gray-400 text-base md:text-lg leading-relaxed text-justify">
                         O CBMR nasce como a primeira liga brasileira de Marvel Rivals. Unindo a expertise de transmissão
                         e produção da <strong>Clutch Produtora</strong> em projetos consagrados no cenário como
-                        <strong>Protocolo Rivals</strong> e <strong>BKS Invitational</strong> e a comunidade
+                        <strong>Protocolo Rivals</strong> e <strong>Aurora Cup</strong> e a comunidade
                         <strong>Marvel Rivals Brazuka</strong>, entregamos o maior ecossistema do cenário com formato e
                         nível de execução profissionais.
                     </p>
@@ -250,6 +255,346 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section> -->
+
+    <!-- ========================================================================= -->
+    <!-- SEÇÃO: CIRCUITO CBMR 2027 (SUBSTITUI A SEÇÃO EQUIPES) -->
+    <!-- ========================================================================= -->
+    <section id="circuito" class="py-24 bg-dark-900 relative overflow-hidden border-b border-white/5">
+        <!-- Background Glow de Atmosfera -->
+        <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-gold-500/5 blur-[150px] pointer-events-none rounded-full"></div>
+        <div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/5 blur-[150px] pointer-events-none rounded-full"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+            <!-- Cabeçalho -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <!-- <span class="text-gold-500 font-orbitron font-bold tracking-widest text-xs uppercase block mb-2">Ecossistema Competitivo</span> -->
+                <h2 class="text-3xl md:text-5xl font-orbitron font-black text-white uppercase tracking-tight">
+                    Circuito <span class="text-gold-gradient">CBMR 2027</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base mt-4 leading-relaxed">
+                    Acompanhe a formação oficial das duas divisões da maior liga nacional de Marvel Rivals.
+                </p>
+            </div>
+
+            <!-- Grid com as Duas Tabelas em Paralelo -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+
+                <!-- 1. LIGA PRINCIPAL 2027 -->
+                <div class="glass-card rounded-2xl p-6 md:p-8 border border-gold-500/30 relative overflow-hidden bg-gradient-to-b from-gold-500/[0.04] to-transparent shadow-2xl shadow-gold-500/5">
+                    
+                    <!-- Header da Divisão Principal -->
+                    <div class="flex items-center justify-between pb-6 mb-6 border-b border-gold-500/20">
+                        <div class="flex items-center gap-4">
+                            <img src="img/Prancheta 8.png" alt="Liga Principal" class="h-12 w-auto object-contain">
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-orbitron font-black text-gold-500 uppercase tracking-wide">
+                                    Liga Principal
+                                </h3>
+                                <span class="text-[10px] font-orbitron font-bold text-gold-400 uppercase tracking-widest">
+                                    8 das 8 Vagas Confirmadas
+                                </span>
+                            </div>
+                        </div>
+                        <!-- <span class="hidden sm:inline-block px-3 py-1 bg-gold-500/10 border border-gold-500/30 text-gold-400 font-orbitron font-bold text-[10px] uppercase rounded-full">
+                            Elite Nacional
+                        </span> -->
+                    </div>
+
+                    <!-- Lista de Equipes - Liga Principal -->
+                    <div class="space-y-3">
+
+                        <!-- 1. mosKa -->
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-dark-800/80 border border-gold-500/20 hover:border-gold-500/50 transition-all group">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="font-orbitron font-black text-gold-500 w-5 text-center text-sm">01</span>
+                                <div class="w-10 h-10 rounded-lg bg-black/40 border border-white/10 flex items-center justify-center p-1.5 shrink-0">
+                                    <img src="img/mosKa.png" alt="mosKa" class="max-h-full max-w-full object-contain filter drop-shadow">
+                                </div>
+                                <span class="font-orbitron font-bold text-white text-sm truncate uppercase group-hover:text-gold-400 transition-colors">
+                                    mosKa
+                                </span>
+                            </div>
+                            <span class="text-[9px] md:text-[10px] font-orbitron font-semibold text-gold-400 bg-gold-900/40 border border-gold-500/30 px-2.5 py-1 rounded shrink-0 ml-2">
+                                1º Lugar Liga Principal 2026
+                            </span>
+                        </div>
+
+                        <!-- 2. Ei Nerd Esports -->
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-dark-800/80 border border-white/5 hover:border-gold-500/30 transition-all group">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="font-orbitron font-black text-gray-400 w-5 text-center text-sm">02</span>
+                                <div class="w-10 h-10 rounded-lg bg-black/40 border border-white/10 flex items-center justify-center p-1.5 shrink-0">
+                                    <img src="img/Ei Nerd Esports.png" alt="Ei Nerd Esports" class="max-h-full max-w-full object-contain filter drop-shadow">
+                                </div>
+                                <span class="font-orbitron font-bold text-white text-sm truncate uppercase group-hover:text-gold-400 transition-colors">
+                                    Ei Nerd Esports
+                                </span>
+                            </div>
+                            <span class="text-[9px] md:text-[10px] font-orbitron font-semibold text-gold-400/80 bg-gold-900/20 border border-gold-500/20 px-2.5 py-1 rounded shrink-0 ml-2">
+                                2º Lugar Liga Principal 2026
+                            </span>
+                        </div>
+
+                        <!-- 3. BKs E-SPORTS -->
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-dark-800/80 border border-white/5 hover:border-gold-500/30 transition-all group">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="font-orbitron font-black text-gray-400 w-5 text-center text-sm">03</span>
+                                <div class="w-10 h-10 rounded-lg bg-black/40 border border-white/10 flex items-center justify-center p-1.5 shrink-0">
+                                    <img src="img/BKs E-Sports.PNG" alt="BKs E-SPORTS" class="max-h-full max-w-full object-contain filter drop-shadow">
+                                </div>
+                                <span class="font-orbitron font-bold text-white text-sm truncate uppercase group-hover:text-gold-400 transition-colors">
+                                    BKs E-SPORTS
+                                </span>
+                            </div>
+                            <span class="text-[9px] md:text-[10px] font-orbitron font-semibold text-gold-400/80 bg-gold-900/20 border border-gold-500/20 px-2.5 py-1 rounded shrink-0 ml-2">
+                                3º Lugar Liga Principal 2026
+                            </span>
+                        </div>
+
+                        <!-- 4. Team-neXus -->
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-dark-800/80 border border-white/5 hover:border-gold-500/30 transition-all group">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="font-orbitron font-black text-gray-400 w-5 text-center text-sm">04</span>
+                                <div class="w-10 h-10 rounded-lg bg-black/40 border border-white/10 flex items-center justify-center p-1.5 shrink-0">
+                                    <img src="img/Team-neXus.PNG" alt="Team-neXus" class="max-h-full max-w-full object-contain filter drop-shadow">
+                                </div>
+                                <span class="font-orbitron font-bold text-white text-sm truncate uppercase group-hover:text-gold-400 transition-colors">
+                                    Team-neXus
+                                </span>
+                            </div>
+                            <span class="text-[9px] md:text-[10px] font-orbitron font-semibold text-gold-400/80 bg-gold-900/20 border border-gold-500/20 px-2.5 py-1 rounded shrink-0 ml-2">
+                                4º Lugar Liga Principal 2026
+                            </span>
+                        </div>
+
+                        <!-- 5. Allwayss -->
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-dark-800/80 border border-white/5 hover:border-gold-500/30 transition-all group">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="font-orbitron font-black text-gray-400 w-5 text-center text-sm">05</span>
+                                <div class="w-10 h-10 rounded-lg bg-black/40 border border-white/10 flex items-center justify-center p-1.5 shrink-0">
+                                    <img src="img/Allwayss.PNG" alt="Allwayss" class="max-h-full max-w-full object-contain filter drop-shadow">
+                                </div>
+                                <span class="font-orbitron font-bold text-white text-sm truncate uppercase group-hover:text-gold-400 transition-colors">
+                                    Allwayss
+                                </span>
+                            </div>
+                            <span class="text-[9px] md:text-[10px] font-orbitron font-semibold text-gold-400/80 bg-gold-900/20 border border-gold-500/20 px-2.5 py-1 rounded shrink-0 ml-2">
+                                5º Lugar Liga Principal 2026
+                            </span>
+                        </div>
+
+                        <!-- 6. Calamity One -->
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-dark-800/80 border border-white/5 hover:border-gold-500/30 transition-all group">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="font-orbitron font-black text-emerald-400 w-5 text-center text-sm">06</span>
+                                <div class="w-10 h-10 rounded-lg bg-black/40 border border-white/10 flex items-center justify-center p-1.5 shrink-0">
+                                    <span class="font-orbitron font-black text-purple-400 text-xs">V1</span>
+                                </div>
+                                <span class="font-orbitron font-bold text-white text-sm truncate uppercase group-hover:text-gold-400 transition-colors">
+                                    VG One
+                                </span>
+                            </div>
+                            <span class="text-[9px] md:text-[10px] font-orbitron font-semibold text-emerald-400 bg-emerald-950/40 border border-emerald-500/30 px-2.5 py-1 rounded shrink-0 ml-2">
+                                1º Lugar Liga Desafiante 2026
+                            </span>
+                        </div>
+
+                        <!-- 7. MONØLITH -->
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-dark-800/80 border border-white/5 hover:border-gold-500/30 transition-all group">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="font-orbitron font-black text-emerald-400 w-5 text-center text-sm">07</span>
+                                <div class="w-10 h-10 rounded-lg bg-black/40 border border-white/10 flex items-center justify-center p-1.5 shrink-0">
+                                    <img src="img/MONØLITH.png" alt="MONØLITH" class="max-h-full max-w-full object-contain filter drop-shadow">
+                                </div>
+                                <span class="font-orbitron font-bold text-white text-sm truncate uppercase group-hover:text-gold-400 transition-colors">
+                                    MONØLITH
+                                </span>
+                            </div>
+                            <span class="text-[9px] md:text-[10px] font-orbitron font-semibold text-emerald-400 bg-emerald-950/40 border border-emerald-500/30 px-2.5 py-1 rounded shrink-0 ml-2">
+                                2º Lugar Liga Desafiante 2026
+                            </span>
+                        </div>
+
+                        <!-- 8. I Need -->
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-dark-800/80 border border-white/5 hover:border-gold-500/30 transition-all group">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="font-orbitron font-black text-purple-400 w-5 text-center text-sm">08</span>
+                                <div class="w-10 h-10 rounded-lg bg-black/40 border border-white/10 flex items-center justify-center p-1.5 shrink-0">
+                                    <!-- Placeholder visual suave caso precise adicionar logo depois -->
+                                    <span class="font-orbitron font-black text-purple-400 text-xs">IN</span>
+                                </div>
+                                <span class="font-orbitron font-bold text-white text-sm truncate uppercase group-hover:text-gold-400 transition-colors">
+                                    I Need
+                                </span>
+                            </div>
+                            <span class="text-[9px] md:text-[10px] font-orbitron font-semibold text-purple-300 bg-purple-950/40 border border-purple-500/30 px-2.5 py-1 rounded shrink-0 ml-2">
+                                2º Lugar Protocolo Rivals S9
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 2. LIGA DESAFIANTE 2027 -->
+                <div class="glass-card rounded-2xl p-6 md:p-8 border border-white/10 relative overflow-hidden bg-gradient-to-b from-white/[0.02] to-transparent shadow-2xl">
+                    
+                    <!-- Header da Divisão Desafiante -->
+                    <div class="flex items-center justify-between pb-6 mb-6 border-b border-white/10">
+                        <div class="flex items-center gap-4">
+                            <img src="img/Prancheta 6.png" alt="Liga Desafiante" class="h-12 w-auto object-contain">
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-orbitron font-black text-white uppercase tracking-wide">
+                                    Liga Desafiante
+                                </h3>
+                                <span class="text-[10px] font-orbitron font-bold text-gray-400 uppercase tracking-widest">
+                                    2 de 8 Vagas Preenchidas
+                                </span>
+                            </div>
+                        </div>
+                        <!-- <span class="hidden sm:inline-block px-3 py-1 bg-white/5 border border-white/10 text-gray-300 font-orbitron font-bold text-[10px] uppercase rounded-full">
+                            Porta de Entrada
+                        </span> -->
+                    </div>
+
+                    <!-- Lista de Equipes - Liga Desafiante -->
+                    <div class="space-y-3">
+
+                        <!-- 1. Ðeviants -->
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-dark-800/80 border border-white/5 hover:border-white/20 transition-all group">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="font-orbitron font-black text-rose-400 w-5 text-center text-sm">01</span>
+                                <div class="w-10 h-10 rounded-lg bg-black/40 border border-white/10 flex items-center justify-center p-1.5 shrink-0">
+                                    <img src="img/Deviants.png" alt="Ðeviants" class="max-h-full max-w-full object-contain filter drop-shadow">
+                                </div>
+                                <span class="font-orbitron font-bold text-white text-sm truncate uppercase group-hover:text-gold-400 transition-colors">
+                                    Ðeviants
+                                </span>
+                            </div>
+                            <span class="text-[9px] md:text-[10px] font-orbitron font-semibold text-rose-400 bg-rose-950/40 border border-rose-500/30 px-2.5 py-1 rounded shrink-0 ml-2">
+                                8º Lugar Liga Principal 2026
+                            </span>
+                        </div>
+
+                        <!-- 2. Desgraces -->
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-dark-800/80 border border-white/5 hover:border-white/20 transition-all group">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="font-orbitron font-black text-rose-400 w-5 text-center text-sm">02</span>
+                                <div class="w-10 h-10 rounded-lg bg-black/40 border border-white/10 flex items-center justify-center p-1.5 shrink-0">
+                                    <img src="img/Desgraces.png" alt="Desgraces" class="max-h-full max-w-full object-contain filter drop-shadow">
+                                </div>
+                                <span class="font-orbitron font-bold text-white text-sm truncate uppercase group-hover:text-gold-400 transition-colors">
+                                    Desgraces
+                                </span>
+                            </div>
+                            <span class="text-[9px] md:text-[10px] font-orbitron font-semibold text-rose-400 bg-rose-950/40 border border-rose-500/30 px-2.5 py-1 rounded shrink-0 ml-2">
+                               7º Lugar Liga Principal 2026
+                            </span>
+                        </div>
+
+                        <!-- 3. PLACEHOLDER: Campeão Várzea Rivals -->
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-dark-800/40 border border-dashed border-white/10 opacity-70 hover:opacity-100 transition-all">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="font-orbitron font-black text-gray-500 w-5 text-center text-sm">03</span>
+                                <div class="w-10 h-10 rounded-lg bg-white/[0.02] border border-dashed border-white/10 flex items-center justify-center shrink-0">
+                                    <span class="font-orbitron font-bold text-gray-600 text-xs">?</span>
+                                </div>
+                                <span class="font-orbitron font-semibold text-gray-400 text-sm truncate uppercase italic">
+                                    A Definir
+                                </span>
+                            </div>
+                            <span class="text-[9px] md:text-[10px] font-orbitron font-semibold text-amber-400/80 bg-amber-950/30 border border-amber-500/20 px-2.5 py-1 rounded shrink-0 ml-2">
+                                Campeão Várzea Rivals
+                            </span>
+                        </div>
+
+                        <!-- 4. PLACEHOLDER: Campeão Aurora Cup 2 -->
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-dark-800/40 border border-dashed border-white/10 opacity-70 hover:opacity-100 transition-all">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="font-orbitron font-black text-gray-500 w-5 text-center text-sm">04</span>
+                                <div class="w-10 h-10 rounded-lg bg-white/[0.02] border border-dashed border-white/10 flex items-center justify-center shrink-0">
+                                    <span class="font-orbitron font-bold text-gray-600 text-xs">?</span>
+                                </div>
+                                <span class="font-orbitron font-semibold text-gray-400 text-sm truncate uppercase italic">
+                                    A Definir
+                                </span>
+                            </div>
+                            <span class="text-[9px] md:text-[10px] font-orbitron font-semibold text-cyan-400/80 bg-cyan-950/30 border border-cyan-500/20 px-2.5 py-1 rounded shrink-0 ml-2">
+                                Campeão Aurora Cup 2
+                            </span>
+                        </div>
+
+                        <!-- 5. PLACEHOLDER: Open Qualify -->
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-dark-800/40 border border-dashed border-gold-500/20 bg-gold-500/[0.02] opacity-80 hover:opacity-100 transition-all">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="font-orbitron font-black text-gold-500/60 w-5 text-center text-sm">05</span>
+                                <div class="w-10 h-10 rounded-lg bg-gold-500/5 border border-dashed border-gold-500/30 flex items-center justify-center shrink-0">
+                                    <span class="font-orbitron font-bold text-gold-400 text-xs">Q</span>
+                                </div>
+                                <span class="font-orbitron font-semibold text-gray-300 text-sm truncate uppercase italic">
+                                    A Definir
+                                </span>
+                            </div>
+                            <span class="text-[9px] md:text-[10px] font-orbitron font-semibold text-gold-400 bg-gold-900/30 border border-gold-500/30 px-2.5 py-1 rounded shrink-0 ml-2">
+                                Vaga via Open Qualify
+                            </span>
+                        </div>
+
+                        <!-- 6. PLACEHOLDER: Open Qualify -->
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-dark-800/40 border border-dashed border-gold-500/20 bg-gold-500/[0.02] opacity-80 hover:opacity-100 transition-all">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="font-orbitron font-black text-gold-500/60 w-5 text-center text-sm">06</span>
+                                <div class="w-10 h-10 rounded-lg bg-gold-500/5 border border-dashed border-gold-500/30 flex items-center justify-center shrink-0">
+                                    <span class="font-orbitron font-bold text-gold-400 text-xs">Q</span>
+                                </div>
+                                <span class="font-orbitron font-semibold text-gray-300 text-sm truncate uppercase italic">
+                                    A Definir
+                                </span>
+                            </div>
+                            <span class="text-[9px] md:text-[10px] font-orbitron font-semibold text-gold-400 bg-gold-900/30 border border-gold-500/30 px-2.5 py-1 rounded shrink-0 ml-2">
+                                Vaga via Open Qualify
+                            </span>
+                        </div>
+
+                        <!-- 7. PLACEHOLDER: Open Qualify -->
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-dark-800/40 border border-dashed border-gold-500/20 bg-gold-500/[0.02] opacity-80 hover:opacity-100 transition-all">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="font-orbitron font-black text-gold-500/60 w-5 text-center text-sm">07</span>
+                                <div class="w-10 h-10 rounded-lg bg-gold-500/5 border border-dashed border-gold-500/30 flex items-center justify-center shrink-0">
+                                    <span class="font-orbitron font-bold text-gold-400 text-xs">Q</span>
+                                </div>
+                                <span class="font-orbitron font-semibold text-gray-300 text-sm truncate uppercase italic">
+                                    A Definir
+                                </span>
+                            </div>
+                            <span class="text-[9px] md:text-[10px] font-orbitron font-semibold text-gold-400 bg-gold-900/30 border border-gold-500/30 px-2.5 py-1 rounded shrink-0 ml-2">
+                                Vaga via Open Qualify
+                            </span>
+                        </div>
+
+                        <!-- 8. PLACEHOLDER: Open Qualify -->
+                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-dark-800/40 border border-dashed border-gold-500/20 bg-gold-500/[0.02] opacity-80 hover:opacity-100 transition-all">
+                            <div class="flex items-center gap-3 min-w-0">
+                                <span class="font-orbitron font-black text-gold-500/60 w-5 text-center text-sm">08</span>
+                                <div class="w-10 h-10 rounded-lg bg-gold-500/5 border border-dashed border-gold-500/30 flex items-center justify-center shrink-0">
+                                    <span class="font-orbitron font-bold text-gold-400 text-xs">Q</span>
+                                </div>
+                                <span class="font-orbitron font-semibold text-gray-300 text-sm truncate uppercase italic">
+                                    A Definir
+                                </span>
+                            </div>
+                            <span class="text-[9px] md:text-[10px] font-orbitron font-semibold text-gold-400 bg-gold-900/30 border border-gold-500/30 px-2.5 py-1 rounded shrink-0 ml-2">
+                                Vaga via Open Qualify
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </section>
 
@@ -320,7 +665,7 @@
                 <span
                     class="text-gold-500 font-orbitron font-bold tracking-widest text-xs uppercase block mb-2">PREMIAÇÃO</span>
                 <h2 class="text-3xl md:text-5xl font-orbitron font-black text-white uppercase tracking-tight">
-                    PREMIAÇÃO DO <span class="text-gold-gradient">CBMR 2026 SPLIT 1</span>
+                    PREMIAÇÃO DO <span class="text-gold-gradient">CBMR 2027</span>
                 </h2>
                 <p class="text-gray-400 text-sm md:text-base mt-4">
                     Dispute o topo do cenário brasileiro e garanta sua parte da premiação total de <span
@@ -395,51 +740,7 @@
         </div>
     </section>
 
-    <!-- SEÇÃO: EQUIPES PARTICIPANTES (FOCO CENTRAL) -->
-    <section id="equipes" class="py-24 bg-dark-900 relative overflow-hidden border-b border-white/5">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
-            <!-- Cabeçalho -->
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
-                <div>
-                    <span
-                        class="text-gold-500 font-orbitron font-bold tracking-widest text-xs uppercase block mb-2">CBMR
-                        2026 Split 1</span>
-                    <h2 class="text-3xl md:text-5xl font-orbitron font-black text-white uppercase tracking-tight">
-                        Equipes <span class="text-gold-gradient">Confirmadas</span>
-                    </h2>
-                </div>
-
-                <!-- Controles -->
-                <div class="flex gap-3 self-end md:self-auto">
-                    <button id="carousel-prev"
-                        class="w-12 h-12 rounded border border-white/10 bg-white/[0.02] flex items-center justify-center text-white hover:border-gold-500 hover:text-gold-500 transition-all group">
-                        <svg class="w-5 h-5 transform group-hover:-translate-x-0.5 transition-transform" fill="none"
-                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
-                        </svg>
-                    </button>
-                    <button id="carousel-next"
-                        class="w-12 h-12 rounded border border-white/10 bg-white/[0.02] flex items-center justify-center text-white hover:border-gold-500 hover:text-gold-500 transition-all group">
-                        <svg class="w-5 h-5 transform group-hover:translate-x-0.5 transition-transform" fill="none"
-                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Palco do Carrossel (Garante apenas 3 cards visíveis em telas maiores) -->
-            <div class="relative max-w-5xl mx-auto">
-                <div id="teams-stage" class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center min-h-[420px] px-4">
-                    <!-- Os 3 cards ativos serão injetados aqui via JavaScript -->
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="calendario" class="py-24 bg-dark-900">
+    <!-- <section id="calendario" class="py-24 bg-dark-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-6 space-y-8">
@@ -470,7 +771,7 @@
                                 <span
                                     class="text-xs text-gold-400 block tracking-wider uppercase font-bold">Sextas-Feiras
                                     (20:00 BRT)</span>
-                                <p class="text-gold-500 font-orbitron text-sm uppercase font-semibold">Rodada Oficial da
+                                <p class="text-gold-500 font-orbitron font-semibold text-sm uppercase">Rodada Oficial da
                                     Liga Principal</p>
                             </div>
                         </div>
@@ -503,7 +804,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section id="formulario" class="py-24 bg-dark-800 relative overflow-hidden border-t border-white/5">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
